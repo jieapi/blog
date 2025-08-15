@@ -35,18 +35,20 @@ export default defineConfig({
         // 默认文案修改
         returnToTopLabel: '回到顶部',
         sidebarMenuLabel: '相关文章',
-        lastUpdatedText: '上次更新于',
+        lastUpdated : {
+            text : '上次更新于'
+        },
 
         // 设置logo
         logo: '/logo.png',
-        // editLink: {
-        //   pattern:
-        //     'https://github.com/ATQQ/sugar-blog/tree/master/packages/blogpress/:path',
-        //   text: '去 GitHub 上编辑内容'
-        // },
+/*        editLink: {
+          pattern:
+            'https://github.com/ATQQ/sugar-blog/tree/master/packages/blogpress/:path',
+          text: '去 GitHub 上编辑内容'
+        },*/
         nav: [
             {text: '首页', link: '/'},
-            {text: '关于作者', link: 'https://sugarat.top/aboutme.html'}
+            {text: '在线加密', link: 'https://murk.xiaojieapi.com'}
         ],
         socialLinks: [
             {

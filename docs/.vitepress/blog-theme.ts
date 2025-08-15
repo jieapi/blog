@@ -32,9 +32,9 @@ const blogTheme = getThemeConfig({
   footer: {
     // message 字段支持配置为HTML内容，配置多条可以配置为数组
     // message: '下面 的内容和图标都是可以修改的噢（当然本条内容也是可以隐藏的）',
-    copyright: 'MurkPHP',
+    copyright: '2025 MurkPHP. 保留所有权利.',
     icpRecord: {
-      name: '蜀ICP备19011724号',
+      name: '123456',
       link: 'https://beian.miit.gov.cn/'
     },
     // securityRecord: {
@@ -55,16 +55,9 @@ const blogTheme = getThemeConfig({
       nickname: 'MurkPHP',
       des: 'PHP在线加密工具',
       avatar:
-        'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030',
-      url: 'https://sugarat.top',
-    },
-    {
-      nickname: 'Vitepress',
-      des: 'Vite & Vue Powered Static Site Generator',
-      avatar:
-        'https://vitepress.dev/vitepress-logo-large.webp',
-      url: 'https://vitepress.dev/',
-    },
+        '/murkphp.png',
+      url: 'https://murk.xiaojieapi.com',
+    }
   ],
 
   comment: {

@@ -4,3 +4,5 @@ cache
 .temp
 .DS_Store
 /.idea/
+/docs/vx_notebook/
+vx.json
