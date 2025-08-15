@@ -2,7 +2,8 @@
 layout: home
 # 首页部分元素定制
 blog:
- avatarMode: card
+ # 移动端隐藏头像
+ minScreenAvatar: true
  name: MurkPHP's Blog
  motto: PHP在线加密平台
  inspiring:
