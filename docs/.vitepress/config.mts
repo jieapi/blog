@@ -1,7 +1,12 @@
 import {defineConfig} from 'vitepress'
-
+import {
+    GitChangelog,
+    GitChangelogMarkdownSection,
+} from '@nolebase/vitepress-plugin-git-changelog/vite'
 // 导入主题的配置
 import {blogTheme} from './blog-theme'
+
+import {GitPageDataTransfromer, GitPluginForVite} from 'vitepress-plugin-git'
 
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
 // 通常需要修改 base 路径，通常为“/仓库名/”
@@ -35,17 +40,17 @@ export default defineConfig({
         // 默认文案修改
         returnToTopLabel: '回到顶部',
         sidebarMenuLabel: '相关文章',
-        lastUpdated : {
-            text : '上次更新于'
+        lastUpdated: {
+            text: '上次更新于'
         },
 
         // 设置logo
         logo: '/logo.png',
-/*        editLink: {
-          pattern:
-            'https://github.com/ATQQ/sugar-blog/tree/master/packages/blogpress/:path',
-          text: '去 GitHub 上编辑内容'
-        },*/
+        /*        editLink: {
+                  pattern:
+                    'https://github.com/ATQQ/sugar-blog/tree/master/packages/blogpress/:path',
+                  text: '去 GitHub 上编辑内容'
+                },*/
         nav: [
             {text: '首页', link: '/'},
             {text: '在线加密', link: 'https://murk.xiaojieapi.com'}
@@ -53,7 +58,7 @@ export default defineConfig({
         socialLinks: [
             {
                 icon: 'github',
-                link: 'https://github.com/ATQQ/sugar-blog/tree/master/packages/theme'
+                link: 'https://github.com/jieapi/blog'
             }
         ]
     },
@@ -63,15 +68,23 @@ export default defineConfig({
             // 在这里可以修改md实例或添加自定义插件
             md.use((md) => {
                 const originalRender = md.render
-                md.render = function(src, env) {
+                md.render = function (src, env) {
                     // 在这里修改src内容
                     const modifiedSrc = src.replace(/raw.githubusercontent.com\/jieapi\/cdn\/main/g, 'fastly.jsdelivr.net/gh/jieapi/cdn@main')
                     return originalRender.call(this, modifiedSrc, env)
                 }
             })
         }
-    }
-
+    },
+    vite: {
+        plugins: [
+            GitChangelog({
+                // 填写在此处填写您的仓库链接
+                repoURL: () => 'https://github.com/jieapi/blog',
+            }),
+            GitChangelogMarkdownSection(),
+        ],
+    },
 
 
 })

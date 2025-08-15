@@ -11,7 +11,7 @@ const RSS: Theme.RSSOptions = {
   baseUrl,
   copyright: 'Copyright (c) 2018-present, 粥里有勺糖',
   description: '你的指尖,拥有改变世界的力量（大前端相关技术分享）',
-  language: 'zh-cn',
+  language: 'zh-CN',
   image: 'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030',
   favicon: 'https://sugarat.top/favicon.ico',
 }

@@ -3,16 +3,16 @@ layout: home
 # 首页部分元素定制
 blog:
  # 移动端隐藏头像
- minScreenAvatar: true
+ minScreenAvatar: false
  name: MurkPHP's Blog
  motto: PHP在线加密平台
  inspiring:
   - 保持热爱，奔赴山海
-  - 千万不要因为走得太久，而忘记了我们为什么出发
-  - 人生就像一场修行，你不可能一开始就修成正果
-  - 无论多么沉重的负担，也不要忘记微笑；无论多么漫长的路程，也不要忘记坚持
+  - 不忘初心，方得始终。初心易得，始终难守
+  - 越长大越孤单，这就是成长的代价吧
+  - 你眼中的星河荡漾，是我一生的心之所向
   - 生活的真谛不在繁华，而在于淡泊
  # 设置 inspiringTimeout 可以实现自动切换
- inspiringTimeout: 3000
+ inspiringTimeout: 5000
  pageSize: 6
 ---
