@@ -2,6 +2,7 @@
 layout: home
 # 首页部分元素定制
 blog:
+ avatarMode: card
  name: MurkPHP's Blog
  motto: PHP在线加密平台
  inspiring:
